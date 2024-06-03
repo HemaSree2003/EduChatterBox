@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .packages .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .packages .box {
+            flex: 1 1 calc(33.33% - 2rem); /* Adjusted flex-basis to fit 3 boxes in one row */
+            border-radius: .5rem;
+            overflow: hidden;
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+        }
+
+        .packages .box img {
+            height: 15rem;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .packages .box .content {
+            padding: 2rem;
+        }
+
+        .packages .box .content h3 {
+            font-size: 2rem;
+            color: yellow; /* Changed the color of the names to yellow */
+        }
+
+        .packages .box .content p {
+            font-size: 1.7rem;
+            color: #666;
+            padding: 1rem 0;
+        }
+
+        .packages .box .content .btn {
+            background-color: yellow; /* Changed the button background color to yellow */
+            color: #333;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .packages .box .content .btn:hover {
+            background-color: #ffd700; /* Changed the button hover color to a lighter shade of yellow */
+        }
+    </style>
+</head>
+
+<body>
+   <!-- <script>
+        // Check if user is logged in
+        // You need to implement this part based on your session management
+        var isLoggedIn = false; // Example: Set to true if user is logged in
+
+        // If not logged in, redirect to login page
+        if (!isLoggedIn) {
+            window.location.href = "login.html";
+        }
+    </script>-->
+    <section class="packages" id="packages">
+        <h1 class="heading">
+            <center><h1>
+                <span>W</span>
+                <span>E</span>
+                <span>B</span>
+                <span>S</span>
+                <span>I</span>
+                <span>T</span>
+                <span>E</span>
+                <span>S</span></h1>
+            </center>
+        </h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="nptel.jpeg" alt="">
+                <div class="content">
+                    
+                    <center><p><a href="nptel.html" class="btn">NPTEL</a></p></center>
+                </div>
+            </div>
+                                                        
+            <div class="box">
+                <img src="coursera.jpg" alt="">
+                <div class="content">
+                    
+                    <center><p><a href="coursera.html" class="btn">Coursera</a></p></center>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="edx.jpg" alt="">
+                <div class="content">
+                 
+                    <center><p><a href="Edx.html" class="btn">edX</a></p></center>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="udemy.jpg" alt="">
+                <div class="content">
+                    
+                   <center><p><a href="Udemy.html" class="btn">Udemy</a></p></center>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="khanacadamey.jpg" alt="">
+                <div class="content">
+                    
+                    <center><p><a href="khanacademy.html" class="btn">khanacadamey</a></p></center>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="codecademy.jpg" alt="">
+                <div class="content">
+                    
+                    <center><p><a href="codecademy.html" class="btn">Codeacademy</a></p></center>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+

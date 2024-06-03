@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css.css">
+    <style>
+        /* CSS for search box */
+        .search-box {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="menu-bar" class="fas fa-bars"></div>
+    
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#programs">programs</a>
+        </nav>
+        
+        <div class="icons">
+            <i class="fas fa-search" id="search-icon"></i> <!-- Search icon -->
+            <div class="search-box" id="search-box">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button id="search-btn">Search</button>
+            </div>
+            <i class="fas fa-user" id="login-btn"></i>
+        </div>
+    </header>
+
+    <section class="home" id="home">
+        <!-- Your existing content -->
+        <div class="background-image">
+            <img src="p1.jpg" alt="picture unavailable">
+            <div class="overlay">
+                <h1 class="educhatterbox">EduChatterBox</h1>
+                <h2 class="message">Unlock Your Potential: Let's Learn!</h2>
+            </div>
+        </div>
+    </section>
+    
+    <section class="packages" id="programs"> 
+        <!-- Your existing content -->
+        <h1 class="heading">
+            <span>P</span>
+            <span>R</span>
+            <span>O</span>
+            <span>G</span>
+            <span>R</span>
+            <span>A</span>
+            <span>M</span>
+            <span>S</span>
+        </h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="p2.jpg" alt="">
+                <div class="content">
+                    <a href="http://localhost/mini%20project/btech.html" class="btn">B.Tech</a> 
+                </div>
+            </div>
+            <div class="box">
+                <img src="p3.jpg" alt="">
+                <div class="content">
+                    <a href="http://localhost/mini%20project/mtech.html" class="btn">M.Tech</a> 
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="footer">
+        <!-- Your existing content -->
+        <div class="box-container">
+            <div class="box">
+                <h3>about us</h3>
+                <p>EduChatterBot is an AI-powered educational platform that provides learning assistance and fosters collaborative learning environments for students. It offers instant access to educational resources, interactive lessons, and enhancing the learning experience and promoting academic success</p>
+            </div>
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#home">home</a>
+                <a href="#programs">programs</a>
+                <a href="#about">about</a>
+            </div>
+            <div class="box">
+                <h3>follow us</h3>
+                <p>facebook:EduChatterBox</p>
+                <p>instagram:EduChatterBox</p>
+                <p>linkedin:EduChatterBox</p>
+            </div>
+        </div>
+        <h1 class="credit">  <span> </span> all  rights reserved!</h1>
+    </section>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   <script>
+        // JavaScript to redirect to login page when login icon is clicked
+        document.getElementById("login-btn").addEventListener("click", function() {
+            window.location.href = "login.html";
+        });
+
+        // JavaScript to show/hide search box
+        document.getElementById("search-icon").addEventListener("click", function() {
+            var searchBox = document.getElementById("search-box");
+            searchBox.style.display = (searchBox.style.display === "block") ? "none" : "block";
+        });
+
+        // JavaScript for search functionality
+        document.getElementById("search-btn").addEventListener("click", function() {
+            var searchTerm = document.getElementById("search-input").value.toLowerCase();
+            var searchMap = {
+                "btech courses": "http://localhost/mini%20project/btech.html",
+                "b.tech": "http://localhost/mini%20project/btech.html",
+                "bachelor of technology": "http://localhost/mini%20project/btech.html",
+                "b.tech courses": "http://localhost/mini%20project/btech.html",
+                "btech": "http://localhost/mini%20project/btech.html",
+
+                "mtech courses": "http://localhost/mini%20project/mtech.html",
+                "master of technology": "http://localhost/mini%20project/mtech.html",
+                "m.tech": "http://localhost/mini%20project/mtech.html",
+                "m.tech couses": "http://localhost/mini%20project/mtech.html",
+                "mtech": "http://localhost/mini%20project/mtech.html",
+
+                "btech coursera": "http://localhost/mini%20project/coursera.html",
+                "mtech coursera": "http://localhost/mini%20project/mcoursera.html",
+
+                "btech udemy": "http://localhost/mini%20project/Udemy.html",
+                "mtech udemy": "http://localhost/mini%20project/mcoursera.html",
+
+                "btech codeacademy": "http://localhost/mini%20project/codecademy.html",
+                "mtech codeacademy": "http://localhost/mini%20project/mcodeacademy.html",
+
+                "btech khanacademy": "http://localhost/mini%20project/khanacademy.html",
+                "mtech khanacademy": "http://localhost/mini%20project/mkhanacademy.html",
+
+                "btech Edx": "http://localhost/mini%20project/Edx.html",
+                "mtech Edx": "http://localhost/mini%20project/mEdx.html",
+
+                "btech nptel": "http://localhost/mini%20project/nptel.html",
+                "mtech nptel": "http://localhost/mini%20project/mnptel.html",
+                "b.tech": "http://localhost/mini%20project/btech.html",
+                // Add more mappings as needed
+            };
+            var url = searchMap[searchTerm];
+            if (url) {
+                window.location.href = url;
+            } else {
+                // Handle search term not found
+                alert("No matching website found for the search term: " + searchTerm);
+            }
+        });
+    </script>
+    <script>
+        window.embeddedChatbotConfig = {
+        chatbotId: "xWyr4A64Q79CMPPua-tKv",
+        domain: "www.chatbase.co"
+        }
+        </script>
+        <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotId="xWyr4A64Q79CMPPua-tKv"
+        domain="www.chatbase.co"
+        defer>
+        </script>
+        <script>
+         // JavaScript to redirect to login page when login icon is clicked//
+         document.getElementById("login-btn").addEventListener("click", function() {
+             window.location.href = "login.html";
+         });
+     </script>
+</body>
+</html>
